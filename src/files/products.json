@@ -18,5 +18,15 @@
     "thumbnail": "http://localhost:8080/images/1645737180077.png",
     "id": 2,
     "time": "March 6th 2022, 10:28:47 pm"
+  },
+  {
+    "title": "Evee",
+    "price": 25,
+    "description": "funko",
+    "code": "8947",
+    "stock": 2,
+    "thumbnail": "http://localhost:8080/images/1645737180077.png",
+    "id": 3,
+    "time": "April 1st 2022, 6:57:18 pm"
   }
 ]

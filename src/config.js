@@ -1,12 +1,11 @@
-const { default: mongoose } = require('mongoose');
-const mongo = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://javier:123@codercluster.mmv7k.mongodb.net/ecommerce2?retryWrites=true&w=majority',{
+let mongooseConnection = mongoose.connect('mongodb+srv://javier:123@codercluster.mmv7k.mongodb.net/project?retryWrites=true&w=majority',{
     useNewUrlParser:true,
-    useUnifiedTopology:true
+    useUnifiedTopology:true,
 }, error =>{
     if(error) throw new Error ('Cannot connect to MongoDB')
     console.log('DB connected')
 })
 
-module.exports = mongoose
+module.exports = mongooseConnection;

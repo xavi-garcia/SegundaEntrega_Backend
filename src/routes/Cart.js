@@ -1,5 +1,5 @@
 const express = require('express');
-const CartManager = require ('../Managers/CartManager');
+const CartManager = require ('../Daos/CartManager');
 const uploader = require('../services/Upload');
 
 const router = express.Router();

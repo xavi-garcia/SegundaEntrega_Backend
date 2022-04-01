@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const moment = require('moment')
 
 const productCollection = 'Products';
 
@@ -9,7 +8,7 @@ const productSchema = new mongoose.Schema({
         url:{type: String, required: true},
         price:{type: Number, required: true},
         stock:{type: Number, required: true},
-        timestamp:{type: moment, default: moment().format('MMMM Do YYYY, h:mm:ss a')},
+        timestamp:{type: Date, default: Date.now()},
         id:{type: Number, required: true},
 });
 

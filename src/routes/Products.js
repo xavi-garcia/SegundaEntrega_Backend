@@ -1,5 +1,5 @@
 const express = require('express');
-const ProductsManager = require('../Managers/ProductsManager');
+const ProductsManager = require('../Daos/ProductsManager');
 const uploader = require('../services/Upload');
 const validateUser = require('../services/Middleware');
 
