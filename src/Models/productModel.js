@@ -9,7 +9,6 @@ const productSchema = new mongoose.Schema({
         price:{type: Number, required: true},
         stock:{type: Number, required: true},
         timestamp:{type: Date, default: Date.now()},
-        id:{type: Number, required: true},
 });
 
 const productService = mongoose.model(productCollection, productSchema);

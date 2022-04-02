@@ -25,3 +25,6 @@ switch (DB) {
 }
 
 module.exports = { productDAO, cartDAO };
+
+
+productDAO.getById()

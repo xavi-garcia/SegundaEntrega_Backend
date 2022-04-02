@@ -4,7 +4,7 @@ const cartModel = require('../Models/cartModel.js');
 
 
 
-class CartServiceMongo {
+class CartManagerMongo {
     createCart = async (cart) => {
       try {
         let newCart = await cartModel.create(cart);
@@ -45,4 +45,4 @@ class CartServiceMongo {
     };
   }
   
-  module.exports = CartServiceMongo;
+  module.exports = CartManagerMongo;
