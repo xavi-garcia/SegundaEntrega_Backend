@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongooseConnection = require('../config.js');
 
 const productCollection = 'Products';
 

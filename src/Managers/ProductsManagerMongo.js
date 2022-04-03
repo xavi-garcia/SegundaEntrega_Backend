@@ -6,11 +6,6 @@ const ProductModel = require('../Models/productModel.js');
 
 class ProductsManagerMongo {
 
-    save = async () => {
-      let product = new ProductModel({name:'Ratata', code:'6878', url:"http://localhost:8080/images/1645737180077.png", price:36, stock:2});
-      await product.save();
-      console.log(product)
-    }
 
     getAll = async () => {
         let products = await ProductModel.find();

@@ -1,7 +1,6 @@
 const fs = require('fs');
 const moment = require('moment');
-const ProductsManager = require('../Daos/ProductsManager');
-const productService = new ProductsManager();
+
 
 const pathToCart = __dirname +'/../files/cart.json';
 

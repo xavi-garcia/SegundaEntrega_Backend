@@ -5,7 +5,7 @@ const cartModel = require('../Models/cartModel.js');
 
 
 class CartManagerMongo {
-    createCart = async (cart) => {
+    create = async (cart) => {
       try {
         let newCart = await cartModel.create(cart);
         return { status: "success", payload: newCart._id};
@@ -14,19 +14,19 @@ class CartManagerMongo {
       }
     };
   
-    getCartById = async (id) => {
+    getById = async (id) => {
       let cart = await cartModel.findById(id);
       if (cart) return { status: "success", payload: cart };
       else return { status: "error", error: "Null" };
     };
 
-    deleteCartById = async (id) => {
+    deleteCart = async (id) => {
         if (!id) return { status: "error", error: "incorrect id" };
         let deletedCart = await cartModel.findByIdAndDelete(id);
         return { status: "success", payload: deletedCart};
     };
   
-    addProduct = async (id, product) => {
+    addProductToCart = async (id, product) => {
       let cart = await cartModel.findById(id);
       if (cart) {
         cart.product.push(product);
@@ -35,7 +35,7 @@ class CartManagerMongo {
       } else return { status: "error", error: "Couldn't add product" };
     };
   
-    deleteProductById = async (id, productId) => {
+    deleteProduct = async (id, productId) => {
       let cart = await cartModel.findById(id);
       if (cart) {
         cart.product.splice(cart.product.indexOf(productId), 1);
